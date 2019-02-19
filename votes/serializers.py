@@ -5,4 +5,5 @@ from .models import Vote
 class VoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vote
-        fields = ('subject', 'vote_taken', 'ayes', 'nays')
+        fields = ('id', 'subject', 'vote_taken', 'ayes', 'nays')
+        ordering = ['-id']
