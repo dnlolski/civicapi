@@ -1,8 +1,8 @@
-from django.conf.urls import url
-from .views import VotesList
-
+from django.urls import path
+from .views import VotesList, VoteDetail
 
 
 urlpatterns = [
-    url('', VotesList.as_view()),
+    path('', VotesList.as_view()),
+    path('<int:pk>', VoteDetail.as_view()),
 ]
